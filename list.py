@@ -11,42 +11,35 @@ print(Alledagen[0:2]) #Weekend
 
 print('=======================================================================')
 
-List1 = [1,2,3,4,5,6,7,8,9,10]
-List2 = [2,4,6,8,10,12,14,16,18,20]
+Listone = [1,2,3,4,5,6,7,8,9,10]
+Listtwo = [2,4,6,8,10,12,14,16,18,20]
 
-def addition(number1, number2):
-    result = number1 + number2
-    return result
+def optellen(Listone, Listtwo):
+    for i in range(len(Listone)):
+        print(Listone[i], '+', Listtwo[i], '=', Listone[i] + Listtwo[i])
+optellen(Listone, Listtwo)
+print('')
+def optellen(Listone, Listtwo):
+    for i in range(len(Listone)):
+        print(Listone[i], '-', Listtwo[i], '=', Listone[i] - Listtwo[i])
+optellen(Listone, Listtwo)
+print('')
+def optellen(Listone, Listtwo):
+    for i in range(len(Listone)):
+        print(Listone[i], '*', Listtwo[i], '=', Listone[i] * Listtwo[i])
+optellen(Listone, Listtwo)
+print('')
+def optellen(Listone, Listtwo):
+    for i in range(len(Listone)):
+        print(Listone[i], '/', Listtwo[i], '=', Listone[i] / Listtwo[i])
+optellen(Listone, Listtwo)
 
-def subtraction(number1, number2):
-    result = number1 - number2
-    return result
+print('=======================================================================')
 
+def spel():
+    import random
+    for i in range(3):
+        spellist = ["Yathzee", "Bridge", "Poker", "Pesten", "Mens erger je niet","Cluedo"]
+        print(random.choice(spellist))
 
-def multiplication(number1, number2):
-    result = number1 * number2
-    return result
-
-def division(number1, number2):
-    result = number1 / number2
-    return result
-
-def increment(number):
-    result = number + 1
-    return result
-
-def decrement(number):
-    result = number - 1
-    return result
-
-
-
-for teller in range(1,11):
-
-    result = addition(List1[0],List2[0])
-    print(List1[0], '+', List2[0], '=', result)
-# for teller in range(1,11):
-#     print(List1[0,9], 'x', List2[0,9], '=')
-# print()
-
-
+spel()
