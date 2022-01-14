@@ -1,30 +1,29 @@
 import random
 
-sack = []
+blue = 0
+yellow = 0
+green = 0
+red = 0
 
-def datatype(sack):
-    aantal = int(input('hoeveel wil je?'))
-    color = ['orange', 'blue', 'green', 'brown']
-    for i in range(aantal):
-        x = random.choice(color)
-        sack.append(x)
-    return sack, color
+color = int(input('how much m&m do you want?'))
+for i in range(color):
+    x = random.randint(1,4)
+    if x in [1]:
+        blue = blue + 1
+    if x in [2]:
+        yellow = yellow + 1
+    if x in [3]:
+        red = red + 1
+    if x in [4]:
+        green = green + 1
 
-def Dictionary(sack):
-    DictionaryBag = {
-    'orange' : '0',
-    'blue'   : '0',
-    'green'  : '0',
-    'brown'  : '0'
-    }
 
-    aantal = int(input('Hoeveel M&M wil je?'))
-    for x in range(aantal):
-        color = random.choice(list(sack))
-        print(color)
-        sack[color] += 1
-    print (sack)
-    return DictionaryBag
-
-Dictionary(sack)
-
+sortmm = [{"color":"blue","total":blue},
+{"color":"yellow","total":yellow},
+{"color":"green","total":green},
+{"color":"red","total":red}]
+print('sack with: ')
+for x in range(4):
+    i = sortmm[x]['total']
+    m = sortmm[x]['color']
+    print('the color', m ,'got', i ,'m&m')
